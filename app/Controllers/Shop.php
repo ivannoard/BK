@@ -26,6 +26,7 @@ class Shop extends BaseController
 	{
 		$barang = $this->barang->select('barang.*, kategori.nama AS kategori')->join('kategori', 'barang.id_kategori=kategori.id')->findAll();
     $kategori = $this->kategori->findAll();
+    // dd($kategori);
 		return view('shop/index',[
 			'barangs' => $barang,
       'kategoris' => $kategori,

@@ -106,6 +106,22 @@ class Validation extends BaseConfig
 		'ongkir'=> [
 			'rules' => 'required',
 		]
+    ];
+    
+    public $barang = [
+		'nama' => [
+			'rules' => 'required',
+		],
+		'harga' => [
+			'rules' => 'required',
+		],
+		'stok'=> [
+			'rules' => 'required',
+		],
+		'id_kategori'=> [
+			'rules' => 'required',
+		],
+
 	];
 
   public $komentar = [

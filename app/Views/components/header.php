@@ -72,6 +72,9 @@ $uri = service('uri');
                 <nav class="nav-menu mobile-menu">
                     <ul> 
                         <li <?= ($uri->getSegment(1)=='')?'class="active"':''?>><a href="<?= site_url('/') ?>">Home</a></li>
+                        <?php if($session->get('isLoggedIn')): ?> 
+                        <li <?= ($uri->getSegment(1)=='product')?'class="active"':''?>><a href="<?= site_url('product') ?>">Product</a></li>\
+                        <?php endif ?>  
                         <li <?= ($uri->getSegment(1)=='shop')?'class="active"':''?>><a href="<?= site_url('shop') ?>">Shop</a></li>  
                         <li <?= ($uri->getSegment(1)=='contact')?'class="active"':''?>><a href="<?= site_url('contact') ?>">Contact</a></li>  
                         <?php if($session->get('isLoggedIn')): ?> 

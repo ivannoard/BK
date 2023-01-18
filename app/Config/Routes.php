@@ -52,6 +52,15 @@ $routes->get('invoice/(:segment)', 'Transaksi::invoice', ['filter' => 'auth']);
 $routes->add('buy', 'Transaksi::buy', ['filter' => 'auth']);
 $routes->add('komentar/create', 'Komentar::create');
 $routes->add('contact', 'Home::contact');
+
+//
+$routes->get('/product', 'Product::index',['filter' => 'auth']);
+$routes->get('/product/add', 'Product::add');
+$routes->add('/product/create', 'Product::create');
+// $routes->get('/product/edit', 'Product::edit');
+$routes->get('/product/edit/(:segment)', 'Product::edit/$1');
+$routes->add('/product/update', 'Product::update');
+$routes->get('/product/delete/(:segment)', 'Product::delete/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
